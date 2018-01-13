@@ -6,7 +6,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello World! <br/> <a href='/firststep/about/'>About</a>")
+    context_dict = {'boldmessage': 'Welcome to Rango! A web-app in progress.'}
+    return render(request,'firststep/index.html',context=context_dict)
 
 def about(request):
-    return HttpResponse("This quaint application is part of the individual assessment for the Web App Development 2 Course. <br/> <a href='/firststep/'>Index</a>")
+    context_dict = {'boldmessage' : 'This page is written by Amirul Lokman Jamaludin.'}
+    return render(request, 'about/about.html',context=context_dict)

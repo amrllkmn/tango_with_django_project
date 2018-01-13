@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>About RANGO</title>
+	</head>
+
+	<body>
+		<h1> What's RANGO? </h1>
+		<div>
+
+
+			RANGO is an web-app developed by<br/>
+			Computing Science students as part of <br/>
+			Web App Development 2 Course <br/>
+			<br/>
+			<strong>{{boldmessage}}</strong><br/>
+		</div>
+		<div>
+			<img src="{{MEDIA_URL}}knuckles.jpg"
+			alt = "Do u kno da wey?"><br/>
+			<a href= '/firststep/'>INDEX</a><br/>
+		</div>
+	</body>
+</html>
