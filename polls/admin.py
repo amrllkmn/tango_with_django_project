@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import Category,Page
+# Register your models here.
+from .models import Question
 
-admin.site.register(Category)
-admin.site.register(Page)
+admin.site.register(Question)
