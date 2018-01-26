@@ -3,12 +3,34 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
+from firststep.models import Category
+
+from firststep.models import Page
+
 from django.http import HttpResponse
 
 def index(request):
-    context_dict = {'boldmessage': 'Welcome to Rango! A web-app in progress.'}
-    return render(request,'firststep/index.html',context=context_dict)
+    category_list = Category.objects.order_by('-likes')[:5]
+    page_list=Page.objects.order_by('-views')[:5]
+    context_dict = {'categories':category_list,'pages':page_list}
+    return render(request,'firststep/index.html',context_dict)
 
 def about(request):
     context_dict = {'boldmessage' : 'This page is written by Amirul Lokman Jamaludin.'}
     return render(request, 'about/about.html',context=context_dict)
+
+def show_category(request, category_name_slug):
+    context_dict={}
+
+    try:
+        category = Category.objects.get(slug=category_name_slug)
+        pages = Page.objects.filter(category=category)
+
+        context_dict['pages']=pages
+        context_dict['category']=category
+
+    except Category.DoesNotExist:
+        context_dict['category']=None
+        context_dict['pages']=None
+
+    return render(request, 'firststep/category.html',context_dict)
