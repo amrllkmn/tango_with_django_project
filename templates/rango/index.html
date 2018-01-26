@@ -16,7 +16,7 @@
 		<ul>
 			{% for category in categories %}
 				<li>
-				<a href="/firststep/category/{{ category.slug}}">{{category.name}}</a>
+				<a href="/rango/category/{{ category.slug}}">{{category.name}}</a>
 				</li>
 			{% endfor %}
 		</ul>
@@ -39,8 +39,8 @@
 		</div>
 
 		<div>
-			<a href= "/firststep/about/">ABOUT</a><br/>
-			<img src= "{% static "images/rango.jpg"%}"
+			<img src="{% static "images/rango.jpg"%}
+			<a href= "/rango/about/">ABOUT</a><br/>
 			alt= "This is where the image of Rango should be" /> <br/>
 		</div>
 	</body>

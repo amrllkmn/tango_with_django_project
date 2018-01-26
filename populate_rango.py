@@ -6,7 +6,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 
 import django
 django.setup()
-from firststep.models import Category, Page
+from rango.models import Category, Page
 
 def populate():
 
@@ -63,13 +63,13 @@ def add_page(cat, title, url, views=0):
 def add_cat(name):
     c = Category.objects.get_or_create(name=name)[0]
     if c.name=='Python':
-        c.view=128
+        c.views=128
         c.likes=64
     elif c.name=='Django':
-        c.view=64
+        c.views=64
         c.likes=32
     elif c.name=='Other Frameworks':
-        c.view=32
+        c.views=32
         c.likes=16
     c.save()   
     return c

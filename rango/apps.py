@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class FirststepConfig(AppConfig):
-    name = 'firststep'
+    name = 'rango'
