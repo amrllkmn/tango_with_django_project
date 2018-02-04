@@ -36,4 +36,4 @@ class Page(models.Model):
         return self.title
 
     def __str__(self):
-        return self.name
+        return self.title

@@ -1,16 +1,15 @@
 ﻿<!DOCTYPE html>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-<html>
+{% block title_block %}
+	About
+{% endblock %}
 
-	<head>
-		<title>About RANGO</title>
-	</head>
+{% block body_block %}
 
-	<body>
 		<h1> What's RANGO? </h1>
 		<div>
-
-
 			This tutorial has been put together by<br/>
 			Computing Science students as part of <br/>
 			Web App Development 2 Course <br/>
@@ -20,7 +19,5 @@
 		<div>
 			<img src="{{MEDIA_URL}}rango.jpg"
 			alt = "Do u kno da wey?"><br/>
-			<a href= '/rango/'>Index</a><br/>
 		</div>
-	</body>
-</html>
+{% endblock %}

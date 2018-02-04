@@ -1,4 +1,4 @@
-<ul>
+﻿<ul>
 {% if cats %}
 	{%for c in cats %}
 		<li><a href="{% url 'show_category' c.slug %}'>{{c.name}}</a></li>
