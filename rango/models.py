@@ -18,9 +18,10 @@ class Category(models.Model):
         
     class Meta:
         verbose_name_plural = 'Categories'
-    
+
     def __str__(self):
         return self.name
+
     def __unicode__(self):
         return self.name
     
@@ -28,10 +29,11 @@ class Category(models.Model):
 class Page(models.Model):
     category = models.ForeignKey(Category)
     title = models.CharField(max_length=128)
-    url = models.URLField()
+    url = models.CharField(max_length=200)
     views = models.IntegerField(default=0)
 
-    def __str__(self):
-        return self.title
     def __unicode__(self):
         return self.title
+
+    def __str__(self):
+        return self.name
