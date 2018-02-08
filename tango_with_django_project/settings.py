@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rango',
     'about',
     'polls.apps.PollsConfig',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,11 @@ MEDIA_URL = '/media/'
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
-LOGIN_URL= '/rango/login/'
+REGISTRATION_OPEN= True
+ACCOUNT_ACTIVATION_DAYS= 3
+REGISTERED_AUTO_LOGIN= True
+LOGIN_REDIRECT_URL= '/rango/'
+LOGIN_URL= '/accounts/login/'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
