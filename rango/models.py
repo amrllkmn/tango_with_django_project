@@ -24,9 +24,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    def __unicode__(self):
-        return self.name
-    
+    #def __unicode__(self):
+        #return self.name
+
 
 class Page(models.Model):
     category = models.ForeignKey(Category)
@@ -34,8 +34,8 @@ class Page(models.Model):
     url = models.CharField(max_length=200)
     views = models.IntegerField(default=0)
 
-    def __unicode__(self):
-        return self.title
+    #def __unicode__(self):
+        #return self.title
 
     def __str__(self):
         return self.title
@@ -50,5 +50,5 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-    def __unicode__(self):
-        return self.user.username
+    #def __unicode__(self):
+        #return self.user.username
